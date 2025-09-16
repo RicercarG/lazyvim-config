@@ -10,5 +10,13 @@ return {
       component_separators = "",
       section_separators = { left = "", right = "" },
     },
+    sections = {
+      lualine_y = {
+        { "progress" },
+      },
+      lualine_z = {
+        { "location", padding = { left = 0, right = 1 } },
+      },
+    },
   },
 }
