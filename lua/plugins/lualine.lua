@@ -1,5 +1,3 @@
--- ~/.config/nvim/lua/plugins/lualine.lua
-
 return {
   "nvim-lualine/lualine.nvim",
   opts = {
@@ -9,6 +7,8 @@ return {
       -- The default LazyVim option is globalstatus = true.
       -- To show a statusline per window, this must be disabled.
       globalstatus = false,
+      component_separators = "",
+      section_separators = { left = "", right = "" },
     },
   },
 }
