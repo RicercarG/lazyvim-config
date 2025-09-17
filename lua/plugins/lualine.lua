@@ -12,11 +12,23 @@ return {
     },
     sections = {
       lualine_y = {
-        { "progress" },
-      },
-      lualine_z = {
+        { "progress", separator = " ", padding = { left = 1, right = 0 } },
         { "location", padding = { left = 0, right = 1 } },
       },
+      lualine_z = {},
+      -- lualine_y = {
+      --   { "progress" },
+      -- },
+      -- lualine_z = {
+      --   { "location", padding = { left = 0, right = 1 } },
+      -- },
+    },
+
+    inactive_sections = {
+      lualine_a = {
+        { "filename", path = 1 },
+      },
+      lualine_c = {},
     },
   },
 }
