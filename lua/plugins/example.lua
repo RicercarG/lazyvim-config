@@ -13,13 +13,13 @@ return {
   -- { "ellisonleao/gruvbox.nvim" },
 
   -- Configure LazyVim to load rose-pine
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "rose-pine-dawn",
-    },
-  },
-
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     colorscheme = "rose-pine",
+  --   },
+  -- },
+  --
   -- change trouble config
   {
     "folke/trouble.nvim",
