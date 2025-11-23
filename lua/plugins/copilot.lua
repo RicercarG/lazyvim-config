@@ -1,0 +1,14 @@
+-- return {
+--   {
+--     "github/copilot.vim",
+--     -- optional settings:
+--     event = "InsertEnter", -- load when entering insert mode
+--     config = function()
+--       -- disable built-in tab mapping if you prefer custom keybinds
+--       vim.g.copilot_no_tab_map = true
+--       vim.g.copilot_assume_mapped = true
+--       -- you can map your accept key, e.g:
+--       vim.api.nvim_set_keymap("i", "<C-l>", 'copilot#Accept("\\<CR>")', { expr = true, silent = true })
+--     end,
+--   },
+-- }
