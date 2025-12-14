@@ -1,24 +1,23 @@
--- return {
---   {
---     "CopilotC-Nvim/CopilotChat.nvim",
---     branch = "main",
---
---     cmd = { "CopilotChat", "CC" },
---
---     opts = {
---       window = {
---         width = 0.3,
---       },
---     },
---
---     config = function(_, opts)
---       local chat = require("CopilotChat")
---       chat.setup(opts)
---
---       vim.api.nvim_create_user_command("CC", function()
---         chat.toggle()
---       end, {})
---     end,
---   },
--- }
-return {}
+return {
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    branch = "main",
+
+    cmd = { "CopilotChat", "CC" },
+
+    opts = {
+      window = {
+        width = 0.3,
+      },
+    },
+
+    config = function(_, opts)
+      local chat = require("CopilotChat")
+      chat.setup(opts)
+
+      vim.api.nvim_create_user_command("CC", function()
+        chat.toggle()
+      end, {})
+    end,
+  },
+}
