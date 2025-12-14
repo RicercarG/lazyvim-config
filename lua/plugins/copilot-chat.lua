@@ -3,7 +3,7 @@ return {
     "CopilotC-Nvim/CopilotChat.nvim",
     branch = "main",
 
-    cmd = { "CopilotChat", "CC" },
+    cmd = { "CopilotChat" },
 
     opts = {
       window = {
