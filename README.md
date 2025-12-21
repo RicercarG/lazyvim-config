@@ -20,6 +20,7 @@ git clone https://github.com/RicercarG/lazyvim-config.git ~/.config/nvim
 ### HPC Tree Sitter Fix
 
 The tree-sitter installed by mason is too new for NYU HPC system. We need to install an older version manually.
+Note that activating a singularity container may avoid some errors.
 
 #### Install cargo
 
@@ -28,6 +29,7 @@ Set path to scratch to avoid quota issues
 ```
 echo 'export RUSTUP_HOME=/scratch/$USER/.rustup' >> ~/.bashrc
 echo 'export CARGO_HOME=/scratch/$USER/.cargo' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 Install cargo
@@ -39,7 +41,8 @@ curl https://sh.rustup.rs -sSf | sh
 Activate cargo
 
 ```
-echo 'source /scratch/$USER/cargo/env' >> ~/.bashrc
+echo 'source /scratch/$USER/.cargo/env' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 #### Install old version of tree-sitter
