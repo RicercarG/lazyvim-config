@@ -2,12 +2,12 @@
 
 Tuned for writing python on remote server.
 
-----
-
 ## Modified from: 💤 LazyVim
 
 A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+Refer to the [documentation](https://lazyvim.github.io/installation).
+
+----
 
 ## Get Started
 
@@ -18,6 +18,8 @@ git clone https://github.com/RicercarG/lazyvim-config.git ~/.config/nvim
 ```
 
 ### HPC Tree Sitter Fix
+
+The tree-sitter installed by mason is too new for NYU HPC system. We need to install an older version manually.
 
 #### Install cargo
 
