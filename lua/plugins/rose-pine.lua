@@ -18,7 +18,6 @@ return {
     end,
   },
 
-  -- auto switch light and dark based on time
   {
     "LazyVim/LazyVim",
     opts = {
