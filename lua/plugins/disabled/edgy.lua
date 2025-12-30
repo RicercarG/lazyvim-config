@@ -1,0 +1,18 @@
+return {}
+-- return {
+--   "folke/edgy.nvim",
+--   opts = {
+--     right = {
+--       -- Claude Code terminal
+--       {
+--         ft = "snacks_terminal",
+--         size = { width = 0.3 },
+--         title = "Claude Code",
+--         filter = function(buf)
+--           local name = vim.api.nvim_buf_get_name(buf)
+--           return name:match("snacks_terminal") ~= nil
+--         end,
+--       },
+--     },
+--   },
+-- }
