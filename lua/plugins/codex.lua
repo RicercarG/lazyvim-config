@@ -1,6 +1,9 @@
 return {
   "JanSmrcka/codex.nvim",
   config = function()
+    -- Disable the plugin's built-in which-key registration (uses deprecated v2 API)
+    require("codex.keymaps").setup_whichkey_integration = function() end
+
     require("codex").setup({
       -- your configuration here (optional)
       window = {
@@ -29,22 +32,6 @@ return {
         },
       },
     })
-
-    -- Hide the plugin's hardcoded <leader>c group (runs after plugin's own 100ms defer)
-    vim.defer_fn(function()
-      local ok, wk = pcall(require, "which-key")
-      if ok then
-        wk.add({
-          { "<leader>c",  hidden = true },
-          { "<leader>cc", hidden = true },
-          { "<leader>cr", hidden = true },
-          { "<leader>cv", hidden = true },
-          { "<leader>cx", hidden = true },
-          { "<leader>cb", hidden = true },
-          { "<leader>cs", hidden = true },
-        })
-      end
-    end, 200)
 
     require("which-key").add({
       { "<leader>o", group = "OpenAI Codex" },
