@@ -17,20 +17,46 @@ return {
           normal = "<C-,>",
           terminal = "<C-,>",
           variants = {
-            continue = "<leader>cc",
-            resume = "<leader>cr",
-            verbose = "<leader>cv",
-            exec = "<leader>cx",
+            continue = "<leader>oc",
+            resume = "<leader>or",
+            verbose = "<leader>ov",
+            exec = "<leader>ox",
           },
         },
         context = {
-          send_buffer = "<leader>cb",
-          send_selection = "<leader>cs",
+          send_buffer = "<leader>ob",
+          send_selection = "<leader>os",
         },
       },
     })
 
-    vim.keymap.set("n", "<leader>cp", function()
+    -- Hide the plugin's hardcoded <leader>c group (runs after plugin's own 100ms defer)
+    vim.defer_fn(function()
+      local ok, wk = pcall(require, "which-key")
+      if ok then
+        wk.add({
+          { "<leader>c",  hidden = true },
+          { "<leader>cc", hidden = true },
+          { "<leader>cr", hidden = true },
+          { "<leader>cv", hidden = true },
+          { "<leader>cx", hidden = true },
+          { "<leader>cb", hidden = true },
+          { "<leader>cs", hidden = true },
+        })
+      end
+    end, 200)
+
+    require("which-key").add({
+      { "<leader>o", group = "OpenAI Codex" },
+      { "<leader>ob", desc = "Send buffer" },
+      { "<leader>oc", desc = "Continue" },
+      { "<leader>or", desc = "Resume" },
+      { "<leader>os", desc = "Send selection" },
+      { "<leader>ov", desc = "Verbose" },
+      { "<leader>ox", desc = "Exec" },
+    })
+
+    vim.keymap.set("n", "<leader>op", function()
       local filepath = vim.api.nvim_buf_get_name(0)
       if filepath == "" then
         vim.notify("No file path for current buffer", vim.log.levels.WARN)
